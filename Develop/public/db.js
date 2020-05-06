@@ -12,7 +12,7 @@ const request = indexedDB.open("budget", 1);
 
 // TODO: create an object store in the open db
 request.onupgradeneeded = function(event){
-  cosnt db = event.target.result;
+  const db = event.target.result;
   db.createObjectStore("budget", { autoIncrement: true });
 };
 // TODO: log any indexedDB errors
